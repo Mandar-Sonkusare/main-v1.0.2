@@ -1,0 +1,95 @@
+.rv-button {
+  @apply overflow-hidden relative;
+  .rv-button-top,
+  .rv-button-bottom {
+    @apply py-[25px] px-[39px] block w-full md:inline-block md:w-auto transition duration-500 min-w-[210px];
+    span {
+      @apply inline-block transition duration-500 font-semibold uppercase tracking-[1.12px];
+    }
+  }
+  .rv-button-top {
+    @apply relative z-10;
+  }
+  .rv-button-bottom {
+    @apply absolute w-full h-full top-0 left-0 translate-y-full z-[9];
+    span {
+      @apply rotate-12;
+    }
+  }
+  &:hover {
+    .rv-button-top {
+      @apply -translate-y-[101%];
+      span {
+        @apply -rotate-12;
+      }
+    }
+    .rv-button-bottom {
+      @apply translate-y-0;
+      span {
+        @apply rotate-0;
+      }
+    }
+  }
+  &-secondary {
+    .rv-button-top {
+      @apply bg-secondary dark:bg-backgroundBody border border-secondary dark:border-backgroundBody z-10;
+      span {
+        @apply text-backgroundBody dark:text-secondary;
+      }
+    }
+    .rv-button-bottom {
+      @apply bg-backgroundBody dark:bg-secondary border border-secondary dark:border-colorText z-[9];
+      span {
+        @apply text-secondary dark:text-backgroundBody;
+      }
+    }
+  }
+  &-white {
+    .rv-button-top {
+      @apply bg-backgroundBody dark:bg-dark border dark:border-dark z-10;
+      span {
+        @apply text-secondary dark:text-backgroundBody;
+      }
+    }
+    .rv-button-bottom {
+      @apply bg-secondary dark:bg-backgroundBody border border-secondary dark:border-backgroundBody z-[9];
+      span {
+        @apply text-backgroundBody dark:text-secondary;
+      }
+    }
+  }
+  &-primary {
+    .rv-button-top {
+      @apply bg-primary border z-10;
+      span {
+        @apply text-secondary;
+      }
+    }
+    .rv-button-bottom {
+      @apply bg-secondary border border-secondary z-[9];
+      span {
+        @apply text-backgroundBody;
+      }
+    }
+  }
+  &-primary2 {
+    .rv-button-top {
+      @apply bg-white dark:bg-inherit border dark:border-dark z-10;
+      span {
+        @apply text-secondary dark:text-backgroundBody;
+      }
+    }
+    .rv-button-bottom {
+      @apply bg-primary border border-primary z-[9];
+      span {
+        @apply text-secondary;
+      }
+    }
+  }
+  &.rv-button-sm {
+    .rv-button-top,
+    .rv-button-bottom {
+      @apply py-4 md:py-[19px] px-5 md:px-[30px] min-w-[127px] md:min-w-[150px];
+    }
+  }
+}

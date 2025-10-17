@@ -1,0 +1,21 @@
+@@include('header.htm')
+
+@@include('components/navbar.htm', {'page': 'services'})
+
+<main class="lg:mb-[600px] relative z-10 bg-backgroundBody dark:bg-dark">
+@@include('components/page-header-single.htm', {
+  badgeTitle:'Services',
+  title:'Services',
+  description:'Explore our innovative cutting-edge no-code websites designed to captivate and engage your <br> visitors effortlessly'
+})
+
+@@include('components/services-v8.htm',{Spacing: 'pt-0 md:pt-0 lg:pt-0 xl:pt-6 '})
+
+@@include('components/process.htm')
+
+@@include('components/cta.htm')
+</main>
+
+@@include('components/footer.htm')
+
+@@include('footer.htm')

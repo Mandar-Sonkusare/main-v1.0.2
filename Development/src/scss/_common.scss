@@ -1,0 +1,605 @@
+// Base Styles
+// -----------
+body {
+  @apply max-w-[100vw] overflow-x-hidden m-0 p-0 antialiased font-satoshi bg-black;
+}
+
+// Font Awesome Icon Styles
+// -----------------------
+*::after,
+*::before {
+  @apply leading-none text-[0];
+}
+
+.fa-solid,
+.fa-brands,
+.fa-regular {
+  &::after,
+  &::before {
+    @apply leading-normal text-base;
+  }
+}
+
+// Lenis Smooth Scroll
+// ------------------
+html.lenis {
+  @apply h-auto;
+}
+
+.lenis {
+  &.lenis-smooth {
+    @apply scroll-auto;
+
+    &[data-lenis-prevent] {
+      @apply overscroll-contain;
+    }
+  }
+
+  &.lenis-stopped {
+    @apply overflow-hidden;
+  }
+
+  &.lenis-scrolling iframe {
+    @apply pointer-events-none;
+  }
+}
+
+// Animations
+// ---------
+@keyframes textRotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes marqueeAni {
+  0% {
+    @apply translate-x-0;
+  }
+  100% {
+    @apply -translate-x-full;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    @apply opacity-0 duration-150;
+  }
+  to {
+    @apply opacity-100 duration-150;
+  }
+}
+
+// Rotating Text Component
+// ---------------------
+.text {
+  @apply absolute w-full h-full font-satoshi uppercase;
+  animation: textRotation 20s linear infinite;
+
+  span {
+    @apply absolute left-1/2 top-[8%] text-xs font-satoshi font-semibold text-white dark:text-secondary;
+    transform-origin: 0 70px;
+    will-change: transform;
+  }
+}
+
+.text-appear,
+.text-appear-2 {
+  .line {
+    @apply overflow-hidden text-inherit;
+    span {
+      @apply text-inherit;
+    }
+    .word {
+      @apply text-inherit;
+    }
+  }
+}
+
+// Canvas Styles
+// ------------
+canvas {
+  @apply relative -top-[1px] -left-[1px] -right-[1px];
+}
+
+// Accordion Components
+// ------------------
+.accordion-header-icon {
+  @apply absolute w-[22px] md:w-10 h-[22px] md:h-10 rounded-full border border-[#e5e5e5] right-3 md:right-10 top-6 md:top-[29px] duration-[0.4s] ease-faq-body-transition;
+
+  &::before,
+  &::after {
+    @apply absolute content-[''] w-[1px]  h-3 md:h-5 bg-secondary dark:bg-backgroundBody top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 duration-[0.4s] ease-faq-body-transition;
+  }
+
+  &::after {
+    @apply -translate-x-1/2 -translate-y-1/2 rotate-90;
+  }
+}
+
+.accordion-header-iconV3 {
+  @apply bg-primary inline-flex size-14 max-lg:px-4 md:size-24 relative duration-[0.6s] ease-faq-body-transition transition-all;
+
+  svg {
+    @apply rotate-0 ease-faq-body-transition duration-700 transition-all;
+  }
+}
+
+.accordion-header-iconV4 {
+  @apply absolute  w-[24.5px] md:w-10 h-[24.5px] md:h-10 rounded-full border border-[#e5e5e5] right-7 bottom-7 duration-[0.4s] ease-faq-body-transition;
+
+  &::before,
+  &::after {
+    @apply absolute content-[''] w-[1px] h-3.5 md:h-5 bg-secondary dark:bg-backgroundBody top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 duration-[0.4s] ease-faq-body-transition;
+  }
+
+  &::after {
+    @apply -translate-x-1/2 -translate-y-1/2 rotate-90;
+  }
+}
+
+.accordion-header-iconV5 {
+  @apply bg-white dark:bg-dark border dark:border-dark inline-flex  size-12 max-lg:px-4 md:size-24 relative duration-[0.4s] ease-faq-body-transition transition-all;
+
+  svg {
+    @apply rotate-0 ease-faq-body-transition duration-300 transition-all;
+
+    path {
+      @apply dark:stroke-white;
+    }
+  }
+}
+
+// Active States
+// ------------
+.active {
+  @apply bg-inherit;
+
+  .accordion-header-icon {
+    @apply bg-secondary dark:bg-backgroundBody border border-secondary dark:border-backgroundBody;
+
+    &::before,
+    &::after {
+      @apply bg-backgroundBody dark:bg-secondary;
+    }
+
+    &::before {
+      @apply -translate-x-1/2 -translate-y-1/2 rotate-[270deg];
+    }
+  }
+
+  .accordion-header-iconV3 {
+    @apply bg-black duration-[0.4s] ease-faq-body-transition transition-all;
+
+    svg {
+      @apply rotate-90 ease-faq-body-transition duration-300;
+
+      path {
+        @apply stroke-white transition-all duration-150;
+      }
+    }
+  }
+
+  .accordion-header-iconV4 {
+    @apply bg-secondary dark:bg-primary border border-secondary dark:border-primary;
+
+    &::before,
+    &::after {
+      @apply bg-backgroundBody dark:bg-secondary;
+    }
+
+    &::before {
+      @apply -translate-x-1/2 -translate-y-1/2 rotate-[270deg];
+    }
+  }
+
+  .accordion-header-iconV5 {
+    @apply bg-black dark:bg-primary duration-[0.4s] ease-faq-body-transition transition-all;
+
+    svg {
+      @apply rotate-90 ease-faq-body-transition duration-300;
+
+      path {
+        @apply stroke-white dark:stroke-black transition-all duration-150;
+      }
+    }
+  }
+}
+
+// Tab Components
+// -------------
+.our-team-details {
+  @apply relative transition-opacity duration-300 ease-team-bezier;
+
+  figure img,
+  h2,
+  p {
+    @apply transition-all duration-300 ease-team-bezier;
+  }
+
+  &.transitioning {
+    @apply opacity-0 translate-y-2.5 ease-team-bezier;
+
+    figure img,
+    h2,
+    p {
+      @apply opacity-0 translate-y-2.5 ease-team-bezier;
+    }
+  }
+}
+
+.tab-member {
+  @apply relative overflow-hidden cursor-pointer transition-all duration-300 ease-team-bezier translate-y-0;
+
+  &::after {
+    @apply absolute content-[''] bottom-0 left-0 w-0 h-[1px] bg-secondary dark:bg-primary transition-all duration-500 ease-team-bezier;
+  }
+
+  &:hover {
+    &::after {
+      @apply w-full;
+    }
+
+    &:not(.tab-active) {
+      @apply -translate-y-[2.5px];
+    }
+  }
+
+  &.tab-active {
+    @apply bg-secondary dark:bg-primary text-backgroundBody -translate-y-[2px] transition-all duration-300 ease-team-bezier;
+
+    h3 {
+      @apply text-white dark:text-secondary transition-colors duration-300 ease-team-bezier;
+    }
+
+    p {
+      @apply dark:text-colorText transition-colors duration-300 ease-team-bezier;
+    }
+  }
+}
+
+// Content Layouts
+// -------------
+.project-details-body {
+  img {
+    &:not(:first-child) {
+      @apply my-9 md:my-[60px];
+    }
+  }
+
+  h3 {
+    @apply mt-9 md:mt-[60px] text-[27px] lg:text-[38px] xl:text-[48px] font-normal leading-tight lg:leading-[1.2]  lg:tracking-[-1.68px] mb-5;
+  }
+}
+
+.project-details2-body {
+  h3 {
+    @apply mt-9 md:mt-[60px] text-[27px] lg:text-[38px] xl:text-[48px] font-normal leading-tight lg:leading-[1.2]  lg:tracking-[-1.68px] mb-5;
+  }
+
+  p {
+    @apply [&>*:not(:first-child)]:mt-5 max-w-[970px] md:text-[22px] md:leading-[1.4] text-colorText dark:text-dark-100;
+  }
+
+  img {
+    @apply mt-9 md:mt-20;
+  }
+}
+
+.blog-details-body {
+  @apply lg:-mt-[20px];
+
+  h3 {
+    @apply mb-5 mt-7  text-[27px] lg:text-[38px] xl:text-[48px] font-normal leading-tight lg:leading-[1.2]  lg:tracking-[-1.68px];
+  }
+
+  p {
+    @apply md:text-[22px] md:leading-[1.4] text-colorText dark:text-dark-100;
+  }
+
+  ul {
+    @apply my-5 ml-4 md:ml-6;
+
+    li {
+      @apply list-disc md:text-[21px] md:leading-[1.4] text-colorText dark:text-dark-100;
+    }
+  }
+
+  img {
+    @apply mt-9 lg:mt-[60px];
+  }
+}
+
+// Menu Components
+// -------------
+.menu-list-item {
+  .menu-list-item-text {
+    @apply transition duration-300 relative;
+
+    &::before {
+      @apply content-none lg:content-[''] absolute w-48 h-[1px] right-0 top-1/2 translate-y-1/2 translate-x-[120%] bg-white/10 transition duration-300 scale-0 origin-left;
+    }
+  }
+
+  .menu-list-item-dropdown {
+    @apply opacity-0 pointer-events-none transition duration-300 translate-x-3 h-0 md:h-fit;
+    .menu-list-item-dropdown-list {
+      &.active {
+        @apply text-primary font-bold;
+        span {
+          @apply text-primary;
+        }
+      }
+    }
+  }
+
+  &.active {
+    .menu-list-item-text {
+      @apply text-primary;
+
+      &::before {
+        @apply scale-100;
+      }
+    }
+
+    .menu-list-item-dropdown {
+      @apply opacity-100 pointer-events-auto translate-x-0 h-fit;
+    }
+  }
+}
+
+// Swiper Styles
+// ------------
+.swiper-wrapper {
+  @apply relative w-full h-full z-[1] flex;
+  transition-property: transform;
+  transition-timing-function: var(
+    --swiper-wrapper-transition-timing-function,
+    initial
+  );
+  box-sizing: content-box;
+}
+
+.swiper-android .swiper-slide,
+.swiper-ios .swiper-slide,
+.swiper-wrapper {
+  transform: translate3d(0px, 0, 0);
+}
+
+.swiper-horizontal {
+  @apply touch-pan-y;
+}
+
+.swiper-slide {
+  @apply flex-shrink-0 w-full h-full relative block;
+  transition-property: transform;
+
+  &-invisible-blank {
+    @apply invisible;
+  }
+}
+
+// Utility Classes
+// -------------
+.animate-marquee {
+  animation: marqueeAni 14000ms linear infinite;
+}
+
+@keyframes marqueeAni {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.reveal-me {
+  @apply overflow-hidden;
+}
+
+.pointer {
+  @apply bg-backgroundBody rounded-full hidden lg:flex justify-center self-center items-center w-4 h-4 mix-blend-difference fixed pointer-events-none -translate-x-2 -translate-y-2 z-[9999];
+}
+
+// Service Item Counter
+// -------------
+.service-item-wrapper {
+  counter-reset: service-item-number;
+}
+
+.service-item-wrapper .service-item-number::before {
+  @apply absolute right-[50px] -translate-x-[50px] md:right-[40px] md:-translate-x-[40px] lg:right-[60px] lg:-translate-x-[60px];
+  background: -webkit-linear-gradient(#86858599, #fff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  @apply text-[180px];
+  -webkit-text-fill-color: transparent;
+  @apply top-0;
+  @apply -z-10;
+  counter-increment: service-item-number;
+  content: "" counter(service-item-number);
+  @apply font-black;
+}
+
+.dark .service-item-wrapper .service-item-number::before {
+  @apply absolute right-[50px] -translate-x-[50px] md:right-[40px] md:-translate-x-[40px] lg:right-[60px] lg:-translate-x-[60px];
+  background: -webkit-linear-gradient(#86858599, #15151599);
+  background-clip: text;
+  -webkit-background-clip: text;
+  @apply text-[180px];
+  -webkit-text-fill-color: transparent;
+  @apply top-0;
+  @apply -z-10;
+  counter-increment: service-item-number;
+  content: "" counter(service-item-number);
+  @apply font-black;
+}
+
+// Blog title hover animation with underline effect
+// -------------
+.blog-title h3 {
+  @apply inline w-full cursor-pointer pb-[1px];
+  /* Using custom cubic-bezier for a smoother, more polished animation */
+  @apply transition-all duration-500 ease-[cubic-bezier(0.645,0.045,0.355,1.000)];
+  background-image: linear-gradient(transparent calc(100% - 2px), #101010 2px);
+  @apply bg-[length:0%_100%] bg-no-repeat;
+}
+
+.dark .blog-title h3 {
+  background-image: linear-gradient(transparent calc(100% - 2px), #ffffff 2px);
+}
+
+.blog-title:hover h3 {
+  @apply bg-[length:100%_100%];
+}
+//  Portfolio Card  Hover-Effect____________
+.underline-hover-effect:hover .blog-title h3 {
+  @apply inline w-full cursor-pointer pb-[1px];
+  @apply transition-all duration-500 ease-[cubic-bezier(0.645,0.045,0.355,1.000)];
+  background-image: linear-gradient(transparent calc(100% - 2px), #101010 2px);
+  @apply bg-[length:0%_100%] bg-no-repeat;
+}
+
+.dark .underline-hover-effect:hover .blog-title h3 {
+  background-image: linear-gradient(transparent calc(100% - 2px), #ffffff 2px);
+}
+.underline-hover-effect:hover .blog-title h3 {
+  @apply bg-[length:100%_100%];
+}
+
+// Team Title Hover Animation with Underline Effect
+// -------------
+.team-title h3 {
+  @apply inline w-full cursor-pointer pb-[1px];
+  /* Transition for smooth animation */
+  @apply transition-all duration-700 ease-in-out;
+  background-image: linear-gradient(transparent calc(100% - 2px), #ffffff 2px);
+  @apply bg-[length:0%_100%] bg-no-repeat;
+}
+
+.team-title:hover h3 {
+  @apply bg-[length:100%_100%];
+}
+
+// Project-services .underline-hover-effect
+
+.project-title h3 {
+  @apply inline w-full cursor-pointer pb-[1px];
+  /* Using custom cubic-bezier for a smoother, more polished animation */
+  @apply transition-all duration-500 ease-[cubic-bezier(0.645,0.085,0.355,1.000)];
+  background-image: linear-gradient(transparent calc(100% - 2px), #101010 2px);
+  @apply bg-[length:0%_100%] bg-no-repeat;
+}
+
+.project-title:hover h3 {
+  @apply bg-[length:100%_100%];
+}
+
+.underline-hover-effect:hover .project-title h3 {
+  @apply inline w-full cursor-pointer pb-[1px];
+  @apply transition-all duration-500 ease-[cubic-bezier(0.645,0.045,0.355,1.000)];
+  background-image: linear-gradient(transparent calc(100% - 2px), #101010 2px);
+  @apply bg-[length:0%_100%] bg-no-repeat;
+}
+
+.underline-hover-effect:hover .project-title h3 {
+  @apply bg-[length:100%_100%];
+}
+
+// --------------------
+.interest-btn {
+  @apply inline-block cursor-pointer border px-3 py-2 text-center text-base font-medium transition-all duration-300 ease-in-out hover:bg-gray-100 md:px-[42px] md:py-5 dark:border-dark dark:hover:bg-slate-900;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked + .interest-btn {
+  @apply bg-primary/80 text-secondary hover:bg-primary dark:hover:bg-primary;
+}
+.radio-wrapper input[type="radio"]:checked + .interest-btn {
+  @apply bg-primary/80 text-secondary hover:bg-primary dark:hover:bg-primary;
+}
+
+.service-card:hover .content {
+  transform: translateY(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+// Footer Gradient text
+.footer-text {
+  background: -webkit-radial-gradient(#fff, #101010);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.swiper-slide {
+  transition: filter 0.4s ease;
+  .rv-badge,
+  h5 {
+    transition: opacity 0.4s ease;
+  }
+}
+.swiper-slide-active {
+  z-index: 2;
+}
+
+// ---Pricing Toggle----------------------
+
+.toggle-slider {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toggle-option {
+  transition: color 0.3s ease;
+}
+
+.yearly .toggle-slider {
+  transform: translateX(calc(100% - 2px));
+}
+
+.toggle-option.active {
+  color: black;
+}
+
+// CTA Inline Slider
+.cta-slider-container {
+  @apply relative h-24 md:h-[100px] w-60 md:w-[250px] overflow-hidden mx-auto inline-block rounded-[70px];
+
+  .cta-inline-slider {
+    @apply absolute w-full h-full transition-transform duration-[0.5s] ease-in-out;
+  }
+
+  .slide {
+    width: 100%;
+    height: 100px;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// HeadRoom Css
+
+.headroom {
+  .gradient-shadow,
+  .nav-top {
+    will-change: transform;
+    transition: transform 400ms linear;
+  }
+}
+.headroom--pinned {
+  .gradient-shadow,
+  .nav-top {
+    transform: translateY(0%);
+  }
+}
+.headroom--unpinned {
+  .gradient-shadow,
+  .nav-top {
+    transform: translateY(-100%);
+  }
+}

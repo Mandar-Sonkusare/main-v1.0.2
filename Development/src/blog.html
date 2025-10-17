@@ -1,0 +1,19 @@
+@@include('header.htm')
+
+@@include('components/navbar.htm', {'page': 'blog'})
+
+<main class="lg:mb-[600px] relative z-10 bg-backgroundBody dark:bg-dark">
+@@include('components/page-header.htm', {
+  badgeTitle:'Blog',
+  title:'What we got to say',
+  description:"These alternatives can add a different tone or emphasis depending on how you want <br> to introduce your creative team. Let me know if you'd like any specific adjustments!"
+})
+
+@@include('components/blog-posts-v5.htm')
+
+@@include('components/cta.htm')
+</main>
+
+@@include('components/footer.htm')
+
+@@include('footer.htm')

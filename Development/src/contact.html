@@ -1,0 +1,18 @@
+@@include('header.htm')
+
+@@include('components/navbar.htm', {'page': 'contact'})
+
+<main class="lg:mb-[600px] relative z-10 bg-backgroundBody dark:bg-dark">
+@@include('components/contact-hero.htm',{
+  badgeTitle: 'Contact',
+  title: "Let's Work Together",
+      description:"Discover our innovative, cutting-edge no-code websites, crafted to effortlessly <br> captivate and engage your visitors."
+})
+
+@@include('components/contact-form.htm')
+
+@@include('components/cta.htm')
+</main>
+@@include('components/footer.htm')
+
+@@include('footer.htm')

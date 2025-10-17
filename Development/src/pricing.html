@@ -1,0 +1,18 @@
+@@include('header.htm')
+
+@@include('components/navbar.htm', {'page': 'pricing'})
+
+<main class="lg:mb-[600px] relative z-10 bg-backgroundBody dark:bg-dark">
+@@include('components/page-header.htm', {
+  badgeTitle:'Pricing',
+  title:'<i class="font-instrument">Pricing</i> Plan',
+  description:"There are many variations of available have suffered alteration in some form by <br> injected words which don't look even slightly believable."
+})
+
+@@include('components/pricing-card.htm')
+
+@@include('components/cta.htm')
+</main>
+@@include('components/footer.htm')
+
+@@include('footer.htm')

@@ -1,0 +1,30 @@
+@@include('header.htm')
+
+@@include('components/navbar.htm', {'page': 'about'})
+
+<main class="lg:mb-[600px] relative z-10 bg-backgroundBody dark:bg-dark">
+  
+@@include('components/page-header.htm',{
+  badgeTitle: 'About',
+  title: 'Digital Solution <i class="font-instrument italic">Agency</i>',
+      description:'As a agency we are working on client projects, official Webflow Templates <br> and cloneables for the Webflow community.'
+})
+
+@@include('components/video.htm')
+
+@@include('components/about.htm')
+
+@@include('components/team-v2.htm',{
+  title:'Our Creative Team'
+})
+
+@@include('components/marquee.htm')
+
+@@include('components/awards.htm')
+
+@@include('components/cta.htm')
+</main>
+
+@@include('components/footer.htm')
+
+@@include('footer.htm')

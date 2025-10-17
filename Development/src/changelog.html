@@ -1,0 +1,19 @@
+@@include('header.htm')
+
+@@include('components/navbar.htm', {'page': 'changelog'})
+
+<main class="lg:mb-[600px] relative z-10 bg-backgroundBody dark:bg-dark">
+@@include('components/page-header-single.htm',{
+  badgeTitle: 'Changelog',
+  title: 'Changelog',
+      description:'This page is password protected. <br> Unlock a world of discovery and secrets within!'
+})
+
+@@include('components/changelog-body.htm')
+
+@@include('components/cta.htm')
+</main>
+
+@@include('components/footer.htm')
+
+@@include('footer.htm')

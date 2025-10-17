@@ -1,0 +1,23 @@
+@@include('header.htm')
+
+@@include('components/navbar.htm', {'page': 'career'})
+
+<main class="lg:mb-[600px] relative z-10 bg-backgroundBody dark:bg-dark">
+@@include('components/career-hero.htm', {
+  badgeTitle:'Career',
+  title:'Start building your <i class="font-instrument italic font-normal">future</i> here',
+  description:"We provide a wide range of growth opportunities, a <br> collaborative work culture, and a supportive team focused on your success"
+})
+
+@@include('components/company-gallery.htm')
+
+@@include('components/benefits.htm')
+
+@@include('components/jobs.htm')
+
+@@include('components/cta.htm')
+</main>
+
+@@include('components/footer.htm')
+
+@@include('footer.htm')
