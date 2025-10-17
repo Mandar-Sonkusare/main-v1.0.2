@@ -12,6 +12,7 @@
     const ul = document.querySelector(".desktop-nav");
     if(!ul) return;
     ul.innerHTML = "";
+    ul.classList.remove("hidden");
     items.forEach(item=>{
       const li = document.createElement("li");
       li.className = "relative group";
