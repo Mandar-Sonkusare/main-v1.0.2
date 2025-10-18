@@ -24,144 +24,8 @@
 </head>
 <body >
 
-<header id="header" class="w-full fixed z-[9999]">
-  <div
-    class="w-full fixed h-[155px] top-0 z-[21] pointer-events-none gradient-shadow"
-  >
-    <div
-      class="absolute inset-0 pointer-events-none"
-      style="backdrop-filter: blur(0px); -webkit-backdrop-filter: blur(0px)"
-    ></div>
-    <div
-      class="absolute inset-0 pointer-events-none rounded-[inherit]"
-      style="
-        mask-image: linear-gradient(
-          0deg,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(255, 255, 255, 1) 16.666666666666664%,
-          rgba(255, 255, 255, 1) 33.33333333333333%,
-          rgba(255, 255, 255, 0) 50%
-        );
-        -webkit-mask-image: linear-gradient(
-          0deg,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(255, 255, 255, 1) 16.666666666666664%,
-          rgba(255, 255, 255, 1) 33.33333333333333%,
-          rgba(255, 255, 255, 0) 50%
-        );
-        backdrop-filter: blur(-7px);
-        -webkit-backdrop-filter: blur(-7px);
-      "
-    ></div>
-    <div
-      class="absolute inset-0 pointer-events-none rounded-[inherit]"
-      style="
-        mask-image: linear-gradient(
-          0deg,
-          rgba(255, 255, 255, 0) 16.666666666666664%,
-          rgba(255, 255, 255, 1) 33.33333333333333%,
-          rgba(255, 255, 255, 1) 50%,
-          rgba(255, 255, 255, 0) 66.66666666666666%
-        );
-        -webkit-mask-image: linear-gradient(
-          0deg,
-          rgba(255, 255, 255, 0) 16.666666666666664%,
-          rgba(255, 255, 255, 1) 33.33333333333333%,
-          rgba(255, 255, 255, 1) 50%,
-          rgba(255, 255, 255, 0) 66.66666666666666%
-        );
-        backdrop-filter: blur(2px);
-        -webkit-backdrop-filter: blur(2px);
-      "
-    ></div>
-    <div
-      class="absolute inset-0 pointer-events-none rounded-[inherit]"
-      style="
-        mask-image: linear-gradient(
-          0deg,
-          rgba(255, 255, 255, 0) 33.33333333333333%,
-          rgba(255, 255, 255, 1) 50%,
-          rgba(255, 255, 255, 1) 66.66666666666666%,
-          rgba(255, 255, 255, 0) 83.33333333333333%
-        );
-        -webkit-mask-image: linear-gradient(
-          0deg,
-          rgba(255, 255, 255, 0) 33.33333333333333%,
-          rgba(255, 255, 255, 1) 50%,
-          rgba(255, 255, 255, 1) 66.66666666666666%,
-          rgba(255, 255, 255, 0) 83.33333333333333%
-        );
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
-      "
-    ></div>
-    <div
-      class="absolute inset-0 pointer-events-none rounded-[inherit]"
-      style="
-        mask-image: linear-gradient(
-          0deg,
-          rgba(255, 255, 255, 0) 50%,
-          rgba(255, 255, 255, 1) 66.66666666666666%,
-          rgba(255, 255, 255, 1) 83.33333333333333%,
-          rgba(255, 255, 255, 0) 100%
-        );
-        -webkit-mask-image: linear-gradient(
-          0deg,
-          rgba(255, 255, 255, 0) 50%,
-          rgba(255, 255, 255, 1) 66.66666666666666%,
-          rgba(255, 255, 255, 1) 83.33333333333333%,
-          rgba(255, 255, 255, 0) 100%
-        );
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-      "
-    ></div>
-    <div
-      class="absolute inset-0 pointer-events-none rounded-[inherit]"
-      style="
-        mask-image: linear-gradient(
-          0deg,
-          rgba(255, 255, 255, 0) 66.66666666666666%,
-          rgba(255, 255, 255, 1) 83.33333333333333%,
-          rgba(255, 255, 255, 1) 100%,
-          rgba(255, 255, 255, 0) 116.66666666666666%
-        );
-        -webkit-mask-image: linear-gradient(
-          0deg,
-          rgba(255, 255, 255, 0) 66.66666666666666%,
-          rgba(255, 255, 255, 1) 83.33333333333333%,
-          rgba(255, 255, 255, 1) 100%,
-          rgba(255, 255, 255, 0) 116.66666666666666%
-        );
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-      "
-    ></div>
-  </div>
-  
-  <nav class="z-[1000] w-full fixed px-5 sm:px-8 pt-1 sm:pt-5 nav-top">
-    <div class="flex justify-between">
-      <a href="index.html">
-        <img
-          class="max-h-[68px] w-auto inline-block dark:hidden"
-          src="images/logo.png"
-          alt="logo"
-        />
-        <img
-          class="max-h-[68px] w-auto dark:inline-block hidden"
-          src="images/logo-white.png"
-          alt="logo"
-        />
-      </a>
-      <div class="flex items-center">
-        <div
-          class="menu-open cursor-pointer relative h-[68px] w-[68px] before:content-[''] before:absolute before:top-[28px] before:left-1/2 before:w-9 before:h-0.5 before:bg-black dark:before:bg-white before:-translate-x-1/2 before:transition-all before:duration-300 after:content-[''] after:absolute after:bottom-[28px] after:left-1/2 after:w-9 after:h-0.5 after:bg-black dark:after:bg-white after:-translate-x-1/2 after:transition-all after:duration-300 hover:before:top-[25px] hover:after:bottom-[25px]"
-        ></div>
-      </div>
-    </div>
-  </nav>
-</header>
-<nav
+
+<!-- <nav
   data-lenis-prevent="true"
   class="menu fixed right-6 top-0 w-full min-h-screen overflow-y-auto z-[99999] before:content-none md:before:content-[''] before:absolute before:w-[1px] before:h-[calc(100vh-94px)] before:left-[45%] before:top-0 before:bg-white before:bg-opacity-10 opacity-0"
 >
@@ -705,7 +569,7 @@
       </div>
     </div>
   </div>
-</nav>
+</nav> -->
 <div
   class="menu-overflow fixed z-[9999] bg-[rgba(10,10,10,0.95)] bg-opacity-60 backdrop-blur-[25px] w-full h-full pointer-events-none"
 ></div>
@@ -3069,31 +2933,33 @@
   <div class="container">
     <!-- Footer Content Grid -->
     <div
-      class="flex flex-col sm:flex-row flex-wrap gap-y-10 sm:gap-y-16 justify-center sm:justify-between relative z-10"
+      class="col-span-12 justify-center relative z-10"
     >
-      <!-- Reach Us Section -->
-      <div class="pr-8 max-lg:basis-full">
+      <!-- Repeat this block up to 12 times -->
+      <div class="pr-8">
         <h5
-          class="uppercase text-sm font-satoshi text-white tracking-[3px] mb-4 sm:mb-8 font-bold"
+          class="uppercase text-sm font-satoshi text-white tracking-[3px] mb-4 sm:mb-8 font-bold" style="text-align: center;"
         >
           Reach Us
         </h5>
-        <p class="text-white text-sm max-md:font-semibold mb-5">
-          Book a quick 15 min meeting where we discuss if our offer <br />
-          would work for your case
+        <p class="text-white text-sm max-md:font-semibold mb-5" style="text-align: center;">
+          Book a quick 30 min meeting where we discuss if our offer would work for your case
         </p>
         <!-- Meeting Scheduler Card -->
         <div
-          class="flex p-4 group bg-primary bg-opacity-30 gap-4 justify-between items-center backdrop-blur-2xl max-w-[360px]"
+          class="flex p-4 group bg-primary bg-opacity-30 gap-4 justify-between items-center backdrop-blur-2xl"
         >
-          <img class="h-[55px] w-auto" src="images/logo.svg" alt="logo" />
+          <img class="h-[55px] w-auto" src="images/white_logo.png" alt="logo" />
           <div>
             <h6 class="text-sm font-satoshi text-white font-bold">
               Schedule a Free Meeting
             </h6>
-            <p class="text-sm text-white">1 spot left this month</p>
+            <p class="text-sm text-white">Few spots left this month</p>
           </div>
-          <a href="contact.html">
+          <a
+            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ20ChKXOhWn0LGPFXDxOHx0LUY5SOZI-tKYy2zFHpTmCN_3YLuqKaA0EPP9J_DVsDhtH3_CudPy?gv=true"
+            target="_blank"
+          >
             <figure
               class="bg-primary w-[55px] h-[55px] cursor-pointer relative overflow-hidden"
             >
@@ -3110,180 +2976,13 @@
             </figure>
           </a>
         </div>
+        
+        <p class="text-sm max-md:font-semibold mt-10" style="text-align: center;">
+          <a href="terms.php" style="margin-right: 10px;color: aqua;">Terms & Condition</a>
+          <a href="privacy.php" style="color: aqua;">Privacy Policy</a>
+        </p>
       </div>
-
-      <!-- Resources Links -->
-      <div>
-        <h5
-          class="uppercase text-sm font-satoshi text-white tracking-[3px] mb-4 sm:mb-8 font-bold"
-        >
-          Resources
-        </h5>
-        <ul>
-          <li class="mb-4">
-            <a
-              href="blog.html"
-              class="block text-white transition-colors duration-300 font-semibold hover:text-primary"
-              >Blog</a
-            >
-          </li>
-          <li class="mb-4">
-            <a
-              href="blog-02.html"
-              class="block text-white transition-colors duration-300 font-semibold hover:text-primary"
-              >Blog 02</a
-            >
-          </li>
-          <li class="mb-4">
-            <a
-              href="project.html"
-              class="block text-white transition-colors duration-300 font-semibold hover:text-primary"
-              >Projects</a
-            >
-          </li>
-          <li class="mb-4">
-            <a
-              href="project-02.html"
-              class="block text-white transition-colors duration-300 font-semibold hover:text-primary"
-              >Projects 02</a
-            >
-          </li>
-          <li class="mb-4">
-            <a
-              href="project-03.html"
-              class="block text-white transition-colors duration-300 font-semibold hover:text-primary"
-              >Projects 03</a
-            >
-          </li>
-          <li class="mb-4">
-            <a
-              href="pricing.html"
-              class="block text-white transition-colors duration-300 font-semibold hover:text-primary"
-              >Pricing</a
-            >
-          </li>
-        </ul>
-      </div>
-
-      <!-- Company Links -->
-      <div>
-        <h5
-          class="uppercase text-sm font-satoshi text-white tracking-[3px] mb-4 sm:mb-8 font-bold"
-        >
-          Company
-        </h5>
-        <ul>
-          <li class="mb-4">
-            <a
-              href="about.html"
-              class="block text-white transition-colors duration-300 font-semibold hover:text-primary"
-              >About</a
-            >
-          </li>
-          <li class="mb-4">
-            <a
-              href="about-02.html"
-              class="block text-white transition-colors duration-300 font-semibold hover:text-primary"
-              >About 02</a
-            >
-          </li>
-          <li class="mb-4">
-            <a
-              href="faq.html"
-              class="block text-white transition-colors duration-300 font-semibold hover:text-primary"
-              >FAQ</a
-            >
-          </li>
-          <li class="mb-4">
-            <a
-              href="contact.html"
-              class="block text-white transition-colors duration-300 font-semibold hover:text-primary"
-              >Contact</a
-            >
-          </li>
-          <li class="mb-4">
-            <a
-              href="terms.html"
-              class="block text-white transition-colors duration-300 font-semibold hover:text-primary"
-              >Terms of Service</a
-            >
-          </li>
-          <li class="mb-4">
-            <a
-              href="privacy-policy.html"
-              class="block text-white transition-colors duration-300 font-semibold hover:text-primary"
-              >Privacy Policy</a
-            >
-          </li>
-          <li class="mb-4">
-            <a
-              href="career.html"
-              class="block text-white transition-colors duration-300 font-semibold hover:text-primary"
-              >Career</a
-            >
-          </li>
-        </ul>
-      </div>
-
-      <!-- Important Links -->
-      <div>
-        <h5
-          class="uppercase text-sm font-satoshi text-white tracking-[3px] mb-4 sm:mb-8 font-bold"
-        >
-          Important Link
-        </h5>
-        <ul>
-          <li class="mb-4">
-            <a
-              href="career-02.html"
-              class="block text-white transition-colors duration-300 font-semibold hover:text-primary"
-              >Career 02</a
-            >
-          </li>
-          <li class="mb-4">
-            <a
-              href="career-details.html"
-              class="block text-white transition-colors duration-300 font-semibold hover:text-primary"
-              >Career Details</a
-            >
-          </li>
-          <li class="mb-4">
-            <a
-              href="team.html"
-              class="block text-white transition-colors duration-300 font-semibold hover:text-primary"
-              >Team</a
-            >
-          </li>
-          <li class="mb-4">
-            <a
-              href="team-details.html"
-              class="block text-white transition-colors duration-300 font-semibold hover:text-primary"
-              >Team Details</a
-            >
-          </li>
-          <li class="mb-4">
-            <a
-              href="changelog.html"
-              class="block text-white transition-colors duration-300 font-semibold hover:text-primary"
-              >Changelog</a
-            >
-          </li>
-          <li class="mb-4">
-            <a
-              href="password-protected.html"
-              class="block text-white transition-colors duration-300 font-semibold hover:text-primary"
-              >Password Protected</a
-            >
-          </li>
-          <li class="mb-4">
-            <a
-              href="404.html"
-              class="block text-white transition-colors duration-300 font-semibold hover:text-primary"
-              >404</a
-            >
-          </li>
-        </ul>
-      </div>
+      <!-- End of Repeat -->
     </div>
   </div>
 
@@ -3292,7 +2991,7 @@
     <h5
       class="w-full bottom-0 absolute footer-text text-center font-satoshi font-extrabold text-4xl xs:text-5xl sm:text-6xl md:text-[88px] lg:text-[120px] xl:text-[150px] 2xl:text-[170px] tracking-widest text-nowrap translate-y-[30%] left-1/2 -translate-x-1/2"
     >
-      RIVOR AGENCY
+      VCG
     </h5>
   </div>
 </footer>
